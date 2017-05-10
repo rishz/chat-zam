@@ -11,8 +11,12 @@
  var config = require('./config/config.js');
  var connectMongo = require('connect-mongo')(session);
  var mongoose = require('mongoose').connect(config.dbURL);
+ var passAuth = require('./auth/passportAuth.js');
+var passport  = require('passport');
+var facebookStrategy = require('passport-facebook').Strategy;
 
- var env = process.env.NODE_ENV || 'development';
+
+var env = process.env.NODE_ENV || 'development';
 
 if(env==='development'){
     console.log(config.sessionSecret);
@@ -47,6 +51,8 @@ if(env==='development'){
 // John.save(function (err) {
 //     console.log('Done!!')
 // });
+
+passAuth(passport, facebookStrategy, config, mongoose);
 
 app.set('views',path.join(__dirname, 'views'));
  app.engine('html', hogan);
