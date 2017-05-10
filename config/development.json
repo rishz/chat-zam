@@ -1,4 +1,9 @@
 {
   "dbURL" : "mongodb://rishabh:DB1234@ds137281.mlab.com:37281/chat-zam",
-  "sessionSecret":"A245E56VHUY8JBJV"
+  "sessionSecret":"A245E56VHUY8JBJV",
+  "fb":{
+    "appID":"281209382339055",
+    "appSecret":"afcbe2b4b5fe064a8599c7d5222cb9cb",
+    "callbackURL":"http://localhost:3100/auth/facebook/callback"
+  }
 }
