@@ -5,16 +5,14 @@
  var app = express();
  var path = require('path');
  var hogan = require('hogan-express');
+ var routes = require('./routes/route.js');
 
  app.set('views',path.join(__dirname, 'views'));
  app.engine('html', hogan);
  app.set('view engine','html');
  app.use(express.static(path.join(__dirname,'public')));
 
- app.route('/').get(function (req, res, next) {
-  // res.send('<h1> hello world </h1>');
-     res.render('index',{title:'Chat-Zam'});
- });
+ routes(express,app);
 
  app.listen(3100, function () {
      console.log('Server running on port 3000');
