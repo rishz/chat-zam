@@ -1,0 +1,23 @@
+{
+  "name": "chat-zam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rishz/chat-zam.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rishz/chat-zam/issues"
+  },
+  "homepage": "https://github.com/rishz/chat-zam#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "hogan-express": "^0.5.2"
+  }
+}
