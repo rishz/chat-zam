@@ -1,0 +1,4 @@
+{
+  "dbURL" : "mongodb://rishabh:DB1234@ds137281.mlab.com:37281/chat-zam"
+  "sessionSecret":"A245E56VHUY8JBJV"
+}

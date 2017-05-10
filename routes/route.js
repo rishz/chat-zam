@@ -12,5 +12,13 @@ module.exports = function (express,app) {
         res.render('chatrooms',{title:'ChatRooms'});
     });
 
+    router.get('/setcolor', function (req, res, next) {
+        req.session.favColor = 'Red';
+        res.send('Setting fav color!');
+    });
+    router.get('/getcolor', function (req, res, next) {
+        res.send('Fav color: '+req.session.favColor===undefined? 'Not found':req.session.favColor);
+    });
+
     app.use('/',router);
 };
